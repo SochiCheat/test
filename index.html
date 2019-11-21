@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Homework3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<body>
+
+<div class="container-fluid mt-3">
+  
+  <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#myModal">
+  Add New
+  </button>
+  <br>
+  <hr>
+  <br>
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+         <div class="card">
+            <div class="card-body">
+                    <form action="#">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter name...">
+                            </div>
+                            <div class="form-group">
+                                <label>Profiles</label>
+                                <input type="text" class="form-control" id="pro" placeholder="Enter images link...">
+                            </div>
+                            <div class="form-group">
+                                <label>Post</label>
+                                <input type="text" class="form-control" id="post" placeholder="Enter images link...">
+                            </div>
+                            <div class="form-group">
+                                <label>What Your mind</label>
+                                <textarea id="text" cols="30" rows="3" class="form-control" placeholder="Enter text..."></textarea>
+                            </div>
+                            <div class="form-group">
+                              <button type="reset" class="btn btn-primary btn-block" id="add">Add Now</button>
+                            </div>
+                            
+                        </form>
+            </div>
+         </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6" id="result"></div>
+    <div class="col-3"></div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBCyBk-nFUeppWXn7Le2GqLbtxC-ciE7AE",
+    authDomain: "homeworks-474d0.firebaseapp.com",
+    databaseURL: "https://homeworks-474d0.firebaseio.com",
+    projectId: "homeworks-474d0",
+    storageBucket: "homeworks-474d0.appspot.com",
+    messagingSenderId: "746453752623",
+    appId: "1:746453752623:web:b2c85ba1496083ef009fda",
+    measurementId: "G-LPKJXF83PK"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  var db = firebase.firestore();
+</script>
+<script src="js/homework.js"></script>
+</body>
+</html>
